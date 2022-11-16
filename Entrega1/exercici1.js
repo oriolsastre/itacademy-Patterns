@@ -14,12 +14,9 @@ const outbox = join(__dirname, "outbox");
 (async function llegirCanviarEscriure(){
     try{
         const fitxers = await readdir(inbox);
-        fitxers.forEach(async fitxer => {
-            try{
-                const contFixer = await readFile(join(inbox,fitxer),'utf8');
-                await writeFile(join(outbox,fitxer),reverseText(contFixer));
-            }
-            catch(error){console.log(error.message)}
-        })
+        for(const fitxer of fitxers) {
+            const contFixer = await readFile(join(inbox,fitxer),'utf8');
+            await writeFile(join(outbox,fitxer),reverseText(contFixer));
+        }
     }catch(error){console.log(error.message)}
 })();
