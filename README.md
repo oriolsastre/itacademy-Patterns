@@ -1,2 +1,2 @@
-# itacademy-Patterns
-Sprint 3 de l'IT-Academy
+# SPRINT 3 PATTERNS
+Sprint 3 de l'IT-Academy, patrons.
