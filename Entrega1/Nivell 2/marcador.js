@@ -1,22 +1,45 @@
-import { array } from "yargs";
-
-//variable global
-let instancia;
-
 class Marcador {
     constructor(){
-        //amb la classe ja creada, instancia té valor i per tant no es pot tornar a crear perquè llanço un error
-        if(instancia){
-            throw new Error("La classe no és pot tornar a generar.")
+        //Marcador.insatance és el marcador que hem creat primer. Si el volem tornar a crear, retornem el que ja tenim ja que no volem duplicats d'aquesta classe.
+        if(Marcador.instance instanceof Marcador){
+            return Marcador.instance;
         }
-        //creem i donem valor a la variable instancia
-        instancia = this;
 
-        this.ranking = array();
+        this.ranking = new Array();
+        //Per evitar que pugui ser modificat
+        Object.freeze(this);
+
+        //Valor que definim a la primera creació que ens impedirà crear duplicats d'aquesta classe.
+        Marcador.instance = this;
+    }
+
+    maximaPuntuacio(){
+        if(this.ranking.length === 0){throw new Error("No hi ha puntuacions.")}
+        else{
+            var tempMax = {nom: '', puntuacio: 0}
+            this.ranking.forEach(jugador => {
+                if (jugador.puntuacio>tempMax.puntuacio){
+                    tempMax.nom = jugador.nom;
+                    tempMax.puntuacio = jugador.puntuacio;
+                }
+            })
+            return tempMax;
+    }
+    }
+
+    novaPuntuacio(jugador,puntuacio,max=false){
+        if(!(jugador.id != 'undefined' && jugador.nom != 'undefined') || typeof puntuacio != 'number'){
+            throw new Error("Jugador o puntuació invàlida");
+        }
+        if(typeof this.ranking[jugador.id] == 'undefined'){
+            //si no té cap puntuació anterior, li afegim la puntuacio nova.
+            this.ranking[jugador.id] = {nom: jugador.nom, puntuacio: puntuacio}
+        }else if((max && this.ranking[jugador.id].puntuacio<puntuacio) || !max){
+            //Depèn del joc, potser canviem la puntuació sí o sí, o potser només la canviem si ha millorat.
+            //Aquí valorem si o bé el valor max es true i només canviem si la nova puntuació és millor a l'anteior; o bé el valor max és fals i canviem la puntuació sí o sí.
+            this.ranking[jugador.id].puntuacio=puntuacio;
+        }
     }
 }
 
-//creem la classe marcador i serà la que exportarem.
-let instanciaMarcador = Object.freeze(new Marcador());
-
-export default instanciaMarcador;
+module.exports = Marcador;

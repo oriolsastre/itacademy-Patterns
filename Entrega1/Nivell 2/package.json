@@ -1,0 +1,16 @@
+{
+  "name": "nivell-2",
+  "version": "1.0.0",
+  "description": "Nivell 2 del Patterns 3.1",
+  "main": "nivell2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  "keywords": [
+    "patterns",
+    "singleton"
+  ],
+  "author": "Oriol Sastre",
+  "license": "ISC"
+}
