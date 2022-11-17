@@ -52,7 +52,7 @@ App.js
 calc = new Calculadora.
 data = require(data.json)
 
-app = new Middleware(calc) --> Digereix els mètodes del a claculador, de tal manera que la classe app, té els mètodes de calculadora, però no són iguals, sinó que fan més coses entremig, fa primer els middlewares. La calculadora ja no l'haurem de fer servir
+*** app = new Middleware(calc) --> Digereix els mètodes del a claculador, de tal manera que la classe app, té els mètodes de calculadora, però no són iguals, sinó que fan més coses entremig, fa primer els middlewares. La calculadora ja no l'haurem de fer servir
 
 app.addMW((data,next)=>{fa coses i al final next.})
 app.addMW((data,next)=>{fa coses i al final next.})
@@ -61,3 +61,18 @@ app.addMW((data,next)=>{fa coses i al final next.})
 Un cop afegits els middlewares.
 
 app.suma(data), i farà els diversos middlewares fins arribar al resultat final.
+
+*** és la part important. Diuen que com l'exemple, però cal entendre-ho bé.
+
+Els valors que guardem són el req de express.
+
+----------
+
+calc = new Calculadora.
+data = require(data.json)
+App = newMW(), no cal que digereixi.
+
+app.addMW(idem com abans)
+
+Ara bé, no ha digerit els mètodes. Li hem de dir que cal que executi al final.
+app.execute(calc.suma, nums), no hem posat parèntesi ja que no cridem sinó que definim. És com afegir-li un middleware final.
