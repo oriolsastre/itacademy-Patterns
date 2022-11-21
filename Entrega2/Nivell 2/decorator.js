@@ -1,6 +1,6 @@
 const dadesMonetaries = require('./currency_conversions.json');
 
-function convertirMoneda(valor, monEntrada, monSortida){
+let convertirMoneda = (valor, monEntrada, monSortida) => {
     if(monEntrada == "EUR" || monSortida == "EUR"){   
         if(monEntrada == "EUR"){conversio = `${monSortida}_${monEntrada}`; invers=-1;}
         else if(monSortida == "EUR"){conversio = `${monEntrada}_${monSortida}`; invers=1;}
