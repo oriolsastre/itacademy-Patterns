@@ -1,3 +1,3 @@
-const convertirMoneda = require('./decorator')
+const {convertirMoneda, convertirMonedaInt} = require('./decorator')
 
-console.log(convertirMoneda(15,"USD","CNY"))
+console.log(convertirMonedaInt(1,"EUR","USD"))
