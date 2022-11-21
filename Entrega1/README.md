@@ -6,6 +6,8 @@ Cal tenir al mateix directori de l'script una carpeta anomanada "**inbox**" amb 
 
 Aleshores només cal cridar l'script amb `node exercici1.js` des d'un terminal.
 
+## Nivell 2
+
 ## Nivell 3
 
 Cal tenir els 3 fitxers al mateix directori. Aleshores, des d'un terminal executem `node index.js`

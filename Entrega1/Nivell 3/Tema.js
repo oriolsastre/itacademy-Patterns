@@ -14,13 +14,16 @@ class Tema {
         this.events.on('noSubscrit', () => {
             console.log('Només poden enviar missatge al tema aquells usuaris subscrits.')
         })
+        this.events.on('subscrit', (arg1) => {
+            console.log(`En/Na ${arg1} s'ha subscrit a ${this.nom}`)
+        })
     }
 
     subscriure(user){
         //així es poden controlar anteriors subscripcions ara ja no actives.
         this.subscriptor[user.id]={usuari: user, subscrit: true};
         user.subscripcio[this.id]={tema: this, subscrit: true};
-        console.log(`En/Na ${user.nom} s'ha subscrit a ${this.nom}`)
+        this.events.emit('subscrit', user.nom)
     }
 
     estaSubscrit(user){
