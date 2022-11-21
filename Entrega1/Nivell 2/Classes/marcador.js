@@ -5,12 +5,17 @@ class Marcador {
             return Marcador.instance;
         }
 
-        this.ranking = new Array();
+        this.Competicio = new Object();
         //Per evitar que pugui ser modificat
         Object.freeze(this);
 
         //Valor que definim a la primera creació que ens impedirà crear duplicats d'aquesta classe.
         Marcador.instance = this;
+    }
+
+    iniciarCompeticio(nom){
+        this.Competicio[nom] = new Array();
+        console.log(`S'ha iniciat la competició de ${nom}`);
     }
 
     maximaPuntuacio(){
