@@ -26,7 +26,7 @@ class Tema {
         this.events.emit('subscrit', user.nom)
     }
 
-    estaSubscrit(user){
+    #estaSubscrit(user){
         //comprova si un usuari està subscrit a un tema.
         if(this.subscriptor[user.id] == undefined){return false;}
         else {
