@@ -20,10 +20,11 @@ He interpretat 3 tipus de jocs diferents, per provar el tema d'actualitzar marca
 2. Les puntuació s'actualitza només si és superior a la puntuació que ja tenies. Per això un torneig de salt de perxa on el màxim és el resultat que val.
 3. La puntuació s'actualitza sempre, només val l'últim resulat. Per això un cursa, on el resultat final és el que val. Notar que qui queda primer guanya 4 punts, qui queda últim en guanya 1, per interpretar correctament els marcadors.
 
+Quan s'instancia un joc, s'instancia el marcador també, però sempre el mateix, que és l'objectiu d'aquest exercici.
+
 He anat intercalant les competicions diferents a l'afegir i actualitzar punts per a comprovar que funcionen de forma independent però amb la mateixa classe marcador sense problemes.
 
 Després de cada ronda, crido els marcadors actuals, però cada cop des d'una competició diferent, perquè quedi clar que totes les competicions fan servir la **mateixa** classe marcador.
-
 
 Quan la Classe marcador espera `competicio` com a paràmetre, se n'espera el paràmetre `nom` de la Classe `Joc`.
 
