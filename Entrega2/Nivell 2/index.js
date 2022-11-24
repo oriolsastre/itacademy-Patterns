@@ -16,7 +16,7 @@ let calculProductes = (cataleg, categoria) => {
     return preus;
 }
 
-let categoria = "Cuina"
+var categoria = "Cuina"
 
 console.log(`La suma dels preus dels productes de la categoria de ${categoria} és de:`)
 console.log(calculProductes(cataleg, categoria))

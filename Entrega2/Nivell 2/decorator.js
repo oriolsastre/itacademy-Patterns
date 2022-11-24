@@ -1,5 +1,6 @@
 const dadesMonetaries = require('./currency_conversions.json');
 
+//Aquesta funció converteix entre monedes, per defecte a Euros, però pot convertir entre qualsevol parell de monedes que estigui present al fitxer currency_conversions.js
 let convertirMoneda = (valor, monEntrada, monSortida = "EUR") => {
     if(monEntrada == monSortida){return valor;}
     else if(monEntrada == "EUR" || monSortida == "EUR"){   
@@ -36,6 +37,7 @@ const toEur = fn => {
 
 
 
+//Aquest és un decorador de prova, per a la funció converirMoneda, que comprova que els primers n arguments siguin nombres.
 const requireInegers = (n,fn) => {
     //els primers n paràmetres han de ser numeros
     return (...params) => {
@@ -46,7 +48,6 @@ const requireInegers = (n,fn) => {
         return fn(...params);
     }
 }
-
 let convertirMonedaInt = requireInegers(1,convertirMoneda);
 
 module.exports = {convertirMoneda, convertirMonedaInt, toEur};
