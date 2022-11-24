@@ -1,0 +1,68 @@
+{
+    "001": {
+        "nom": "Cadira",
+        "categoria": "Menjador",
+        "preu": 159,
+        "moneda": "USD"
+    },
+    "002": {
+        "nom": "Sofà",
+        "categoria": "Menjador",
+        "preu": 700,
+        "moneda": "USD"
+    },
+    "003": {
+        "nom": "Gandula",
+        "categoria": "Jardineria",
+        "preu": 158.25,
+        "moneda": "GBP"
+    },
+    "004": {
+        "nom": "Cadira de vímet",
+        "categoria": "Jardineria",
+        "preu": 1500,
+        "moneda": "CNY"
+    },
+    "005": {
+        "nom": "Nevera",
+        "categoria": "Cuina",
+        "preu": 1750,
+        "moneda": "CAD"
+    },
+    "006": {
+        "nom": "Torradora",
+        "categoria": "Cuina",
+        "preu": 78.99,
+        "moneda": "EUR"
+    },
+    "007": {
+        "nom": "Làmpada",
+        "categoria": "Menjador",
+        "preu": 88,
+        "moneda": "CHF"
+    },
+    "008": {
+        "nom": "Porteria de futbol",
+        "categoria": "Jardineria",
+        "preu": 296,
+        "moneda": "CNY"
+    },
+    "009": {
+        "nom": "Taula metàl·lica",
+        "categoria": "Jardineria",
+        "preu": 275,
+        "moneda": "USD"
+    },
+    "010": {
+        "nom": "Joc de paelles",
+        "categoria": "Cuina",
+        "preu": 6900,
+        "moneda": "CNY"
+    },
+    "011": {
+        "nom": "Fregidora",
+        "categoria": "Cuina",
+        "preu": 125,
+        "moneda": "GBP"
+    }
+}
