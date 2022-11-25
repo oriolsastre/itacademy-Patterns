@@ -26,7 +26,7 @@ const toEur = fn => {
         if(typeof arguments[0] != 'object'){throw errorCataleg;}
         var catalegEur = arguments[0];
         for([id, article] of Object.entries(catalegEur)){
-            let nouValor = convertirMoneda(article.preu,article.moneda,"EUR");
+            let nouValor = convertirMoneda(article.preu,article.moneda);
             article.preu = nouValor;
             article.moneda = "EUR"
         }
