@@ -1,12 +1,12 @@
 # Entrega 1
 
-## Nivell 1
+## Nivell 1 - Callback hell
 
 Cal tenir al mateix directori de l'script una carpeta anomanada "**inbox**" amb els fitxers que volguem invertir, i una carpeta anomenada "**outbox**" on hi guardarem els fitxers invertits.
 
 Aleshores només cal cridar l'script amb `node exercici1.js` des d'un terminal.
 
-## Nivell 2
+## Nivell 2 - Singleton
 
 Cal tenir en una carpeta el fitxer `index.js` i la carpeta `Classes` amb els 3 fitxers de Classes corresponents. Aleshores des d'un terminal, cal que executem el fitxer index.js amb l'ordre
 
@@ -30,7 +30,7 @@ Quan la Classe marcador espera `competicio` com a paràmetre, se n'espera el par
 
 En les classes hi ha ordres `console.log()` comentades que descriuen el procés d'inscripció o similars que he comentat per netejar una mica l'output final de l'exercici.
 
-## Nivell 3
+## Nivell 3 - Observer
 
 Cal tenir els 3 fitxers al mateix directori. Aleshores, des d'un terminal executem `node index.js`
 
