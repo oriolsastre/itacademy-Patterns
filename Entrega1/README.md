@@ -1,16 +1,20 @@
 # Entrega 1
 
+Per tots els nivells val: tenir els fitxers al mateix directori i des d'un terminal situat a la carpeta del nivell donar l'ordre:
+
+    node index.js
+
+A continuació algunes consideracions específiques per a cada nivell.
+
 ## Nivell 1 - Callback hell
 
 Cal tenir al mateix directori de l'script una carpeta anomanada "**inbox**" amb els fitxers que volguem invertir, i una carpeta anomenada "**outbox**" on hi guardarem els fitxers invertits.
 
-Aleshores només cal cridar l'script amb `node exercici1.js` des d'un terminal.
+___Aquestes carpetes i fitxers mencionats <span style="color:red">no estan al repositori</span>, cal que siguin creats per l'usuari.___
 
 ## Nivell 2 - Singleton
 
-Cal tenir en una carpeta el fitxer `index.js` i la carpeta `Classes` amb els 3 fitxers de Classes corresponents. Aleshores des d'un terminal, cal que executem el fitxer index.js amb l'ordre
-
-    node index.js
+Cal tenir en una carpeta el fitxer `index.js` i la carpeta `Classes` amb els 3 fitxers de Classes corresponents.
 
 ### Consideracions
 
@@ -32,7 +36,7 @@ En les classes hi ha ordres `console.log()` comentades que descriuen el procés 
 
 ## Nivell 3 - Observer
 
-Cal tenir els 3 fitxers al mateix directori. Aleshores, des d'un terminal executem `node index.js`
+Els fitxer necessaris són `index.js`, la classe `Tema.js` i la classe `User.js`.
 
 ### Consideracions
 
