@@ -1,7 +1,7 @@
 class Middleware{
     constructor(calculadora){
         this.middlewares = new Array;
-        this.dades = null;
+        this.dades = {};
 
         Object.getOwnPropertyNames(Object.getPrototypeOf(calculadora)).forEach(nomMetode => {
             if(nomMetode !== 'constructor'){
@@ -25,8 +25,8 @@ class Middleware{
 
     digerirFuncio(funcio){
          /* Digerir mètodes de calculadora. Ara bé, primer executen els MW i després fan el que han de fer. */
-        this[funcio.name] = (...args) => {
-            this.dades = args[0];
+        this[funcio.name] = (args) => {
+            this.dades = {...args};
             this.executarMW();
 
             //return funcio(...args);   //valors sense canviar

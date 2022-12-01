@@ -29,6 +29,3 @@ L'aplicació busca els articles al catàleg de la categoria que especifiquem i e
 Podem triar la categoria modificant la variable `var categoria`.
 
 Aleshores decorem la funció de tal manera que converteixi tots els preu en Euros, i cridem la nova funció i retorna un objecte amb la suma del preus dels articles de la categoria corresponent en euros, fent servir la conversió proporcionada al fitxer corresponent.
-
-
-## Nivell 3
