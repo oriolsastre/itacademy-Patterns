@@ -48,4 +48,3 @@ novaCalculadora.afegirMW(mwDivisio);
 console.log('La suma dels dos operands modificats és: '+novaCalculadora.suma(dades))
 console.log('La resta dels dos operands modificats és: '+novaCalculadora.resta(dades))
 console.log('La multiplicació dels dos operands modificats és: '+novaCalculadora.multiplica(dades))
-
