@@ -1,4 +1,4 @@
-let i = 1;
+let i = 0;
 class Jugador {
     constructor(nom){
         this.nom = nom;
