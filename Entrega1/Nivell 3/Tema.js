@@ -36,7 +36,7 @@ class Tema {
     }   
 
     baixa(user){
-        if(!this.estaSubscrit(user)){
+        if(!this.#estaSubscrit(user)){
             console.log('Aquest usuari no estava subscrit al nostre tema.')
         }
         else{
@@ -47,7 +47,7 @@ class Tema {
     }
 
     afegirMissatge(user, missatge){
-        if(this.estaSubscrit(user)){
+        if(this.#estaSubscrit(user)){
             this.events.emit('missatge', missatge, user.nom);
             this.subscriptor.forEach(userSubscrit => {
                 userSubscrit.usuari.missatgeRebut.emit('missatge', this.nom);
