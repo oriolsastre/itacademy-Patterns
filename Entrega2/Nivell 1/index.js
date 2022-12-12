@@ -39,6 +39,7 @@ const mwDivisio = (data,next) => {
 
     data[operand1] = data[operand1]/2;
     data[operand2] = data[operand2]/2;
+    next();
 }
 
 novaCalculadora.afegirMW(mwQuadrat);
