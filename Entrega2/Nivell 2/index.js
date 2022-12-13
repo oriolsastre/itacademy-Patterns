@@ -1,13 +1,22 @@
 const {toEur} = require('./decorator')
 const Article = require('./Classes/Article')
+const ArticleEUR = require('./Classes/ArticleEUR')
 const cataleg = require('./cataleg.json')
 
+/* Els articles que tinc al catàleg extern els passo tots a la classe Article que he creat */
 var catalegArray = new Array();
 for([id, article] of Object.entries(cataleg)){
     catalegArray.push(new Article(article.nom, article.categoria, article.moneda, article.preu))
 }
 
+console.log(catalegArray)
 
+var catalegArrayEUR = new Array();
+catalegArray.forEach(article => {
+    catalegArrayEUR.push(new ArticleEUR(article))
+})
+
+console.log(catalegArrayEUR);
 
 
 
