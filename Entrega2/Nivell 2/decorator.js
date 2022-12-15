@@ -24,7 +24,7 @@ const addtoEur = fn => {
     return (...args) => {
         var arg = Array.from(args);
         arg[0].preuEur = convertirMoneda(arg[0].preu, arg[0].moneda)
-        console.log("Aquest article val, en euros, "+arg[0].preuEur)
+        console.log("Aquest article "+arg[0].nom+" val, en euros, "+arg[0].preuEur)
         return fn(...args)
     }
 }

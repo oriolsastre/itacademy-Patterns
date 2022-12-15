@@ -24,4 +24,6 @@ Els fitxer necessaris són:
 
 ### Consideracions
 
-El decordor mostra per consola el preu en Euros, però també afageix una propietat nova a l'objecte Article amb el preu calculat en Euros. 
+El decordor mostra per consola el preu en Euros, però també afageix una propietat nova a l'objecte Article amb el preu calculat en Euros.
+
+Si la moneda no és identificada aleshores el preu en Euros és null. Això passa amb l'últim article del catàleg.
