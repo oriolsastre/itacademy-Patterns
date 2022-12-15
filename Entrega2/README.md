@@ -22,10 +22,6 @@ Els fitxer necessaris són:
 
 - `index.js` on executem l'aplicació.
 
-# Consideracions
+### Consideracions
 
-L'aplicació busca els articles al catàleg de la categoria que especifiquem i en retorna un objecte amb la suma dels preus per unitat monetària.
-
-Podem triar la categoria modificant la variable `var categoria`.
-
-Aleshores decorem la funció de tal manera que converteixi tots els preu en Euros, i cridem la nova funció i retorna un objecte amb la suma del preus dels articles de la categoria corresponent en euros, fent servir la conversió proporcionada al fitxer corresponent.
+El decordor mostra per consola el preu en Euros, però també afageix una propietat nova a l'objecte Article amb el preu calculat en Euros. 

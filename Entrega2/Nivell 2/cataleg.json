@@ -64,5 +64,11 @@
         "categoria": "Cuina",
         "preu": 125,
         "moneda": "GBP"
+    },
+    "012": {
+        "nom": "Pingüí",
+        "categoria": "Menjador",
+        "preu": 125,
+        "moneda": "PST"
     }
 }

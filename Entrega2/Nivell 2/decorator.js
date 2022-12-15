@@ -7,12 +7,13 @@ let convertirMoneda = (valor, monEntrada, monSortida = "EUR") => {
         if(monEntrada == "EUR"){conversio = `${monSortida}_${monEntrada}`; invers=-1;}
         else if(monSortida == "EUR"){conversio = `${monEntrada}_${monSortida}`; invers=1;}
         const factor = dadesMonetaries[conversio];
+        if(factor == undefined){return null; /*No s'ha identificat l'altre moneda.*/}
         //Arrodonit a 2 decimals
         return Math.round(valor*(Math.pow(factor,invers)*100))/100;
 
     }else{
         if(dadesMonetaries[`${monEntrada}_EUR`] == undefined || dadesMonetaries[`${monSortida}_EUR`] == undefined){
-            throw new Error('Moneda no reconeguda');
+            return null;
         }
         const foraEuro = convertirMoneda(valor, monEntrada, "EUR");
         return convertirMoneda(foraEuro,"EUR",monSortida);

@@ -27,7 +27,7 @@ catalegArray.forEach(article => {
 console.log(catalegArray[0])
 
 
-
+/* *************************************************************************** */
 /* D'aquí al final el decorador de la funció com ho havia entregat inicialment */
 let calculProductes = (cataleg, categoria) => {
     var preus = new Object();
