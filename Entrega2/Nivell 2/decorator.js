@@ -19,6 +19,18 @@ let convertirMoneda = (valor, monEntrada, monSortida = "EUR") => {
     }
 }
 
+const addtoEur = fn => {
+    return (...args) => {
+        var arg = Array.from(args);
+        arg[0].preuEur = convertirMoneda(arg[0].preu, arg[0].moneda)
+        console.log("Aquest article val, en euros, "+arg[0].preuEur)
+        return fn(...args)
+    }
+}
+
+
+
+/*Decorator antic de com havia entregat l'exercici anteriorment. */
 const toEur = fn => {
     return (...params) => {
         var arguments = Array.from(params);
@@ -35,10 +47,6 @@ const toEur = fn => {
     }
 } 
 
-const article2eur = article => {
-
-}
-
 
 
 //Aquest és un decorador de prova, per a la funció converirMoneda, que comprova que els primers n arguments siguin nombres. De quan vaig apendre què eren els decorators de funcions
@@ -54,4 +62,4 @@ const requireInegers = (n,fn) => {
 }
 let convertirMonedaInt = requireInegers(1,convertirMoneda);
 
-module.exports = {convertirMoneda, convertirMonedaInt, toEur, article2eur};
+module.exports = {convertirMoneda, convertirMonedaInt, toEur, addtoEur};

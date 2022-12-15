@@ -1,22 +1,30 @@
 const {toEur} = require('./decorator')
+const {addtoEur} = require('./decorator')
 const Article = require('./Classes/Article')
-const ArticleEUR = require('./Classes/ArticleEUR')
 const cataleg = require('./cataleg.json')
 
+let mostrarPreu = article => {
+    console.log(`Aquest article ${article.nom} val ${article.preu}${article.moneda}`)
+}
 /* Els articles que tinc al catàleg extern els passo tots a la classe Article que he creat */
 var catalegArray = new Array();
 for([id, article] of Object.entries(cataleg)){
     catalegArray.push(new Article(article.nom, article.categoria, article.moneda, article.preu))
 }
-
-console.log(catalegArray)
-
-var catalegArrayEUR = new Array();
+//Abans de decorar
 catalegArray.forEach(article => {
-    catalegArrayEUR.push(new ArticleEUR(article))
+    mostrarPreu(article)
 })
+//Per veure quines propietats té inicialment l'objecte Article.
+console.log(catalegArray[0])
 
-console.log(catalegArrayEUR);
+mostrarPreu = addtoEur(mostrarPreu);
+//Després de decorar
+catalegArray.forEach(article => {
+    mostrarPreu(article)
+})
+//Aquest console.log, per veure que efectivament el objecte Article té una propietat extra amb el preu en Euros.
+console.log(catalegArray[0])
 
 
 
@@ -36,9 +44,9 @@ let calculProductes = (cataleg, categoria) => {
 }
 var categoria = "Cuina"
 
-console.log(`La suma dels preus dels productes de la categoria de ${categoria} és de:`)
-console.log(calculProductes(cataleg, categoria))
+//console.log(`La suma dels preus dels productes de la categoria de ${categoria} és de:`)
+//console.log(calculProductes(cataleg, categoria))
 //decorem la funció a EUR
-calculProductesEur = toEur(calculProductes);
-console.log(`La suma dels preus, en EUR, dels productes de la categoria de ${categoria} és de:`)
-console.log(calculProductesEur(cataleg, categoria));
+//calculProductesEur = toEur(calculProductes);
+//console.log(`La suma dels preus, en EUR, dels productes de la categoria de ${categoria} és de:`)
+//console.log(calculProductesEur(cataleg, categoria));

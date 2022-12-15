@@ -5,10 +5,6 @@ class Article {
         this.moneda = moneda;
         this.preu = preu;
     }
-
-    mostraPreu(){
-        return this.preu;
-    }
 }
 
 module.exports = Article;
